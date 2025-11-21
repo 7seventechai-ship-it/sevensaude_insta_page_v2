@@ -806,47 +806,6 @@
             animation: fadeInUp 0.8s ease-out;
         }
     </style>
-    
-    <!-- Amplitude Analytics - Optimized Loading -->
-    <script>
-        // Load Amplitude script asynchronously to avoid blocking page render
-        (function() {
-            var amplitudeScript = document.createElement('script');
-            amplitudeScript.src = 'https://cdn.amplitude.com/script/be76bc31fc6255d5a7e19bbf4a832182.js';
-            amplitudeScript.async = true;
-            
-            // Initialize Amplitude only after page is interactive
-            amplitudeScript.onload = function() {
-                // Use requestIdleCallback to init during browser idle time, or fallback to setTimeout
-                var initAmplitude = function() {
-                    if (window.amplitude) {
-                        window.amplitude.init('be76bc31fc6255d5a7e19bbf4a832182', {
-                            "fetchRemoteConfig": true,
-                            "autocapture": {
-                                "attribution": true,
-                                "fileDownloads": true,
-                                "formInteractions": true,
-                                "pageViews": true,
-                                "sessions": true,
-                                "elementInteractions": true,
-                                "networkTracking": true,
-                                "webVitals": true,
-                                "frustrationInteractions": true
-                            }
-                        });
-                    }
-                };
-                
-                if ('requestIdleCallback' in window) {
-                    requestIdleCallback(initAmplitude);
-                } else {
-                    setTimeout(initAmplitude, 1);
-                }
-            };
-            
-            document.head.appendChild(amplitudeScript);
-        })();
-    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -1344,18 +1303,12 @@
         // DataLayer initialization for GTM
         window.dataLayer = window.dataLayer || [];
         
-        // Tracking helper - sends events to GTM dataLayer and Amplitude
+        // Tracking helper - sends events to GTM dataLayer
         function trackEvent(eventName, eventParams) {
-            // Send to GTM dataLayer
             window.dataLayer.push({
                 'event': eventName,
                 ...eventParams
             });
-            
-            // Send to Amplitude (if loaded)
-            if (window.amplitude && window.amplitude.track) {
-                window.amplitude.track(eventName, eventParams);
-            }
         }
 
         // Track CTA clicks
