@@ -42,14 +42,14 @@
         .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 32px;
+            padding: 0 20px;
         }
 
         /* Header/Hero Dark */
         .hero-section {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: #ffffff;
-            padding-bottom: 100px;
+            padding-bottom: 32px;
             position: relative;
             overflow: hidden;
         }
@@ -66,57 +66,49 @@
         }
 
         .logo {
-            padding: 48px 0 32px;
+            padding: 12px 0 0;
             position: relative;
+            text-align: center;
             z-index: 10;
+            margin-bottom: 0;
         }
 
         .logo img {
-            height: 56px;
+            height: 48px;
             width: auto;
-        }
-
-        /* Hero Image Section - NEW for LP2 */
-        .hero-image-section {
-            display: flex;
-            justify-content: center;
-            margin: 40px 0 48px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .hero-image-section img {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            border-radius: 20px;
-            display: block;
         }
 
         .hero {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 48px;
+            gap: 16px;
             align-items: center;
-            padding: 32px 0;
+            padding: 0;
             position: relative;
             z-index: 10;
         }
 
         .hero-content {
-            order: 1;
+            order: 2;
             text-align: center;
+            margin-top: 0;
+        }
+
+        .hero-image {
+            order: 1;
+            margin-top: 0;
         }
 
         .video-container {
-            order: 2;
+            order: 3;
+            margin-top: 0;
         }
 
         h1 {
             font-size: 48px;
             font-weight: 700;
             line-height: 1.15;
-            margin-bottom: 32px;
+            margin-bottom: 20px;
             letter-spacing: -0.02em;
         }
 
@@ -127,7 +119,7 @@
 
         .subtitle {
             font-size: 20px;
-            margin-bottom: 48px;
+            margin-bottom: 28px;
             opacity: 0.85;
             line-height: 1.7;
             font-weight: 400;
@@ -226,7 +218,7 @@
             display: flex;
             align-items: center;
             gap: 16px;
-            margin: 32px 0;
+            margin: 16px 0;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -251,7 +243,7 @@
 
         /* Benefits List */
         .benefits {
-            margin: 32px auto;
+            margin: 12px auto;
             max-width: 600px;
         }
 
@@ -279,7 +271,7 @@
             border: 1px solid rgba(54, 184, 166, 0.2);
             border-radius: 16px;
             padding: 20px;
-            margin: 32px auto;
+            margin: 12px auto;
             display: flex;
             gap: 14px;
             align-items: flex-start;
@@ -756,8 +748,8 @@
 
             .hero {
                 grid-template-columns: 1fr;
-                gap: 64px;
-                padding: 48px 0;
+                gap: 24px;
+                padding: 0;
                 max-width: 900px;
                 margin: 0 auto;
             }
@@ -819,7 +811,7 @@
             }
         }
 
-        .hero-content, .video-container {
+        .hero-content, .hero-image, .video-container {
             animation: fadeInUp 0.8s ease-out;
         }
     </style>
@@ -837,12 +829,11 @@
                 <img src="sevensaude_logo.webp" alt="Seven Saúde" width="200" height="64">
             </div>
 
-            <!-- Hero Image Section - NEW for LP2 -->
-            <div class="hero-image-section">
-                <img src="hero_lp2.webp" alt="Benefícios Seven Saúde - Telemedicina, Psicologia Online, Desconto em Medicamentos" width="450" height="675">
-            </div>
-
             <div class="hero">
+                <div class="hero-image">
+                    <img src="hero_lp2.webp" alt="Benefícios Seven Saúde" style="width: 100%; height: auto; border-radius: 20px;">
+                </div>
+
                 <div class="hero-content">
                     <h1>
                         A saúde mais <span class="highlight">completa</span> e <span class="highlight">acessível</span> para a sua equipe.
@@ -852,7 +843,7 @@
                         Telemedicina, psicologia, descontos em medicamentos e muito mais. Investimento 90% menor que planos de saúde tradicionais.
                     </p>
 
-                    <a href="https://wa.me/551931996408?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Seven%20Saúde" class="btn-primary cta-track" data-location="lp2-hero">Conheça as soluções</a>
+                    <a href="https://wa.me/551931996408?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Seven%20Saúde" class="btn-primary cta-track" data-location="hero">Conheça as soluções</a>
 
                     <div class="social-proof">
                         <div class="avatars">
@@ -932,7 +923,7 @@
                         <li>Medicamentos</li>
                     </ul>
 
-                    <a href="https://wa.me/551931996408?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Seven%20Saúde" class="btn-primary cta-track" data-location="lp2-pacote-completo" style="margin-top: 40px;">Conhecer o pacote completo →</a>
+                    <a href="https://wa.me/551931996408?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Seven%20Saúde" class="btn-primary cta-track" data-location="pacote-completo" style="margin-top: 40px;">Conhecer o pacote completo →</a>
                 </div>
                 <div>
                     <img src="telemedicina.webp" alt="Telemedicina" style="width: 100%; height: auto; border-radius: 24px;">
@@ -1180,7 +1171,7 @@
                         <li>Cartão multibeneficios aceito em toda rede</li>
                     </ul>
 
-                    <a href="https://wa.me/551931996408?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Seven%20Saúde" class="btn-primary cta-track" data-location="lp2-vale-refeicao" style="margin-top: 40px;">Falar com especialista →</a>
+                    <a href="https://wa.me/551931996408?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Seven%20Saúde" class="btn-primary cta-track" data-location="vale-refeicao" style="margin-top: 40px;">Falar com especialista →</a>
                 </div>
                 <div>
                     <img src="valerefeicao.webp" alt="Vale Refeição e Transporte" style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 24px 64px rgba(54, 184, 166, 0.3);">
@@ -1249,7 +1240,7 @@
             <p style="font-size: 22px; margin: 24px auto 48px; max-width: 700px; opacity: 0.9;">Agende uma consultoria gratuita e descubra como podemos ajudar</p>
             
             <div class="cta-buttons">
-                <a href="https://wa.me/551931996408?text=Olá%2C%20gostaria%20de%20falar%20com%20um%20especialista" class="btn-white cta-track" data-location="lp2-final-cta">Falar com especialista</a>
+                <a href="https://wa.me/551931996408?text=Olá%2C%20gostaria%20de%20falar%20com%20um%20especialista" class="btn-white cta-track" data-location="final-cta">Falar com especialista</a>
             </div>
 
             <div class="cta-info">
@@ -1339,8 +1330,7 @@
                 trackEvent('cta_click', {
                     'cta_location': this.dataset.location || 'unknown',
                     'cta_text': this.textContent.trim(),
-                    'cta_url': this.href,
-                    'page': 'lp2'
+                    'cta_url': this.href
                 });
             });
         });
@@ -1349,8 +1339,7 @@
         document.getElementById('whatsapp-float').addEventListener('click', function() {
             trackEvent('whatsapp_click', { 
                 'button_location': 'floating',
-                'click_url': this.href,
-                'page': 'lp2'
+                'click_url': this.href
             });
         });
 
