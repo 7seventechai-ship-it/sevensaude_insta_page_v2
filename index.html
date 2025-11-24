@@ -42,7 +42,7 @@
         .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 32px;
+            padding: 0 20px;
         }
 
         /* Header/Hero Dark */
@@ -80,7 +80,7 @@
         .hero {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 8px;
+            gap: 4px;
             align-items: center;
             padding: 0;
             position: relative;
@@ -88,13 +88,19 @@
         }
 
         .hero-content {
-            order: 1;
+            order: 2;
             text-align: center;
             margin-top: -12px;
         }
 
+        .hero-image {
+            order: 1;
+            margin-top: -8px;
+        }
+
         .video-container {
-            order: 2;
+            order: 3;
+            margin-top: -12px;
         }
 
         h1 {
@@ -189,7 +195,7 @@
             overflow: hidden;
             background: linear-gradient(135deg, #36b8a6 0%, #2da091 100%);
             box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
-            margin-top: -8px;
+            margin-top: -16px;
         }
 
         .video-wrapper {
@@ -805,7 +811,7 @@
             }
         }
 
-        .hero-content, .video-container {
+        .hero-content, .hero-image, .video-container {
             animation: fadeInUp 0.8s ease-out;
         }
     </style>
@@ -824,6 +830,10 @@
             </div>
 
             <div class="hero">
+                <div class="hero-image">
+                    <img src="hero_lp2.webp" alt="Benefícios Seven Saúde" style="width: 100%; height: auto; border-radius: 20px;">
+                </div>
+
                 <div class="hero-content">
                     <h1>
                         A saúde mais <span class="highlight">completa</span> e <span class="highlight">acessível</span> para a sua equipe.
