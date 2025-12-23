@@ -470,6 +470,124 @@
             margin-top: 0.75rem;
         }
         
+        /* SPECIALTIES SECTION */
+        .specialties {
+            padding: 4rem 1.5rem;
+            background: var(--darker);
+        }
+        
+        .specialties-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .specialties-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .specialties-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .specialties-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .specialty-category {
+            background: var(--dark);
+            border: 1px solid rgba(36, 168, 160, 0.2);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .specialty-category:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+        
+        .specialty-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .specialty-category h3 {
+            font-size: 1.5rem;
+            color: var(--primary-light);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .specialty-list {
+            display: grid;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .specialty-item {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9375rem;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .specialty-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-light);
+            font-weight: 700;
+        }
+        
+        .specialty-more {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+        
+        .specialties-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(36, 168, 160, 0.2);
+        }
+        
+        .specialties-cta-text {
+            font-size: 1.125rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .btn-specialties {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-arrow {
+            font-size: 1.25rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-specialties:hover .btn-arrow {
+            transform: translateX(4px);
+        }
+        
         /* SAME QUALITY SECTION */
         .same-quality {
             padding: 3rem 1.5rem 6rem;
@@ -728,6 +846,10 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             
+            .specialties-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
             .cards-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -773,6 +895,10 @@
             }
             
             .stats-data {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .specialties-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
             
@@ -991,6 +1117,89 @@
                     <span class="card-badge">Seven PLUS</span>
                     <h3>Fitness, jurídico, financeiro e mais</h3>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIALTIES SECTION -->
+    <section class="specialties">
+        <div class="specialties-content">
+            <div class="specialties-header">
+                <div class="specialties-badge">+35 especialidades médicas</div>
+                <h2 class="section-title">
+                    Médicos especialistas<br>
+                    <span class="gradient-text-primary">quando você precisa</span>
+                </h2>
+                <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); margin-top: 1rem; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Do clínico geral ao especialista. Cuidado completo para você e sua família, sem fila e sem complicação.
+                </p>
+            </div>
+            
+            <div class="specialties-grid">
+                <!-- CUIDADOS GERAIS -->
+                <div class="specialty-category">
+                    <span class="specialty-icon">🏥</span>
+                    <h3>Cuidados Gerais</h3>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9375rem; line-height: 1.6;">
+                        Para o dia a dia da sua saúde. Aquele médico que você precisa sempre.
+                    </p>
+                    <div class="specialty-list">
+                        <div class="specialty-item">Clínica Geral</div>
+                        <div class="specialty-item">Cardiologia</div>
+                        <div class="specialty-item">Endocrinologia</div>
+                        <div class="specialty-item">Gastroenterologia</div>
+                        <div class="specialty-item">Geriatria</div>
+                        <div class="specialty-item">Pneumologia</div>
+                    </div>
+                    <span class="specialty-more">e muito mais...</span>
+                </div>
+                
+                <!-- ESPECIALIDADES FOCALIZADAS -->
+                <div class="specialty-category">
+                    <span class="specialty-icon">🔬</span>
+                    <h3>Especialidades Focalizadas</h3>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9375rem; line-height: 1.6;">
+                        Quando você precisa de um olhar mais específico para sua saúde.
+                    </p>
+                    <div class="specialty-list">
+                        <div class="specialty-item">Neurologia</div>
+                        <div class="specialty-item">Urologia</div>
+                        <div class="specialty-item">Ginecologia</div>
+                        <div class="specialty-item">Ortopedia</div>
+                        <div class="specialty-item">Psiquiatria</div>
+                        <div class="specialty-item">Oftalmologia</div>
+                    </div>
+                    <span class="specialty-more">e muito mais...</span>
+                </div>
+                
+                <!-- PEDIATRIA -->
+                <div class="specialty-category">
+                    <span class="specialty-icon">👶</span>
+                    <h3>Pediatria Completa</h3>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9375rem; line-height: 1.6;">
+                        Cuidado especializado para os pequenos. Saúde infantil quando você precisa.
+                    </p>
+                    <div class="specialty-list">
+                        <div class="specialty-item">Pediatria Geral</div>
+                        <div class="specialty-item">Cardiologia Pediátrica</div>
+                        <div class="specialty-item">Dermatologia Pediátrica</div>
+                        <div class="specialty-item">Endocrinologia Pediátrica</div>
+                        <div class="specialty-item">Gastroenterologia Pediátrica</div>
+                        <div class="specialty-item">Hematologia Pediátrica</div>
+                    </div>
+                    <span class="specialty-more">e muito mais...</span>
+                </div>
+            </div>
+            
+            <div class="specialties-cta">
+                <p class="specialties-cta-text">
+                    E ainda tem muito mais.<br>
+                    <strong style="color: var(--primary-light);">Confira a lista completa de especialidades disponíveis.</strong>
+                </p>
+                <a href="https://app.seventechoficial.com/especialidades" target="_blank" rel="noopener noreferrer" class="btn btn-specialties">
+                    Ver todas as especialidades
+                    <span class="btn-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
